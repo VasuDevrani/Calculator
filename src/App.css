@@ -1,0 +1,61 @@
+body{
+  margin: 0;
+  padding: 0;
+  background-image: linear-gradient(to right , 	#3d3c3c, #cccccc, #363535);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calculator-grid{
+  display: grid;
+  grid-template-columns: repeat(4,6rem);
+  grid-template-rows: minmax(6rem, auto) repeat(5,6rem);
+  margin-top: 50px;
+  border: 10px solid black;
+}
+.span-two{
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+.span-twot{
+  grid-column-start: 3;
+  grid-column-end: 5; 
+}
+.output{
+  grid-column: 1/-1;
+  background-color: crimson;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+  padding: 0.5rem;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+.previous-operand{
+  color: rgba(255, 255, 255, 0.60);
+  font-size: 1.3rem;
+}
+.current-operand{
+  color: rgba(255, 255, 255, 1);
+  font-size: 2.2rem;
+}
+.calculator-grid > button{
+  border: 1px solid white;
+  background-color: rgba(255, 255, 255, 0.40);
+  font-size: 1.7rem;
+}
+.calculator-grid > button:hover,
+.calculator-grid > button:focus{
+  background-color: rgba(255, 255, 255, 1)
+}
+@media  screen and (max-width: 430px) {
+  .calculator-grid{
+    display: grid;
+    grid-template-columns: repeat(4,5rem);
+    grid-template-rows: minmax(6rem, auto) repeat(5,6rem);
+    margin-top: 50px;
+    border: 10px solid black;
+  }
+}
